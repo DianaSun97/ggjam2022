@@ -29,6 +29,7 @@ namespace Platformer.UI
 
         void OnEnable()
         {
+            Debug.Log("Game init");
             _ToggleMainMenu(showMainCanvas);
         }
 
