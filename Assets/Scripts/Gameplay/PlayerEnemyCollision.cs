@@ -20,7 +20,13 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
-            var willHurtEnemy = player.Bounds.center.y >= enemy.Bounds.max.y;
+			/*
+            Debug.Log("Player min: "+player.Bounds.min.y);
+            Debug.Log("Player max: "+player.Bounds.max.y);
+			
+            Debug.Log("Enemy min: "+enemy.Bounds.min.y);
+            Debug.Log("Enemy max: "+enemy.Bounds.max.y);*/
+            var willHurtEnemy = player.Bounds.min.y-0.5 >= enemy.Bounds.max.y;
 
             if (willHurtEnemy)
             {
